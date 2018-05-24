@@ -5,13 +5,13 @@ import java.io.Serializable;
 public class CreateTicket implements Serializable {
 	private static final long serialVersionUID = 11L;
 
-	private TicketAns ticket;
+	private TicketRespond ticket;
 
-	public TicketAns getTicket() {
+	public TicketRespond getTicket() {
 		return ticket;
 	}
 
-	public void setTicket(TicketAns ticket) {
+	public void setTicket(TicketRespond ticket) {
 		this.ticket = ticket;
 	}
 

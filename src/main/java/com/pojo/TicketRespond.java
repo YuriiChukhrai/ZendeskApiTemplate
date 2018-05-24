@@ -1,6 +1,6 @@
 package com.pojo;
 
-public class TicketAns {
+public class TicketRespond {
 	private String url;
 	private String id;
 	private String external_id;

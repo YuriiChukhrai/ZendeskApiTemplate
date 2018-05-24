@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.pojo.CreateTicket;
-import com.pojo.DraftTicket;
+import com.pojo.Ticket;
 import com.web.template.BaseListener;
 import com.web.template.BaseTest;
 
@@ -22,7 +22,7 @@ public class ApiTest extends BaseTest {
 	public void createTicket() {
 		
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		Object[] respond = post(gson.toJson(new DraftTicket("My printer is on fire!", "The smoke is very colorful.")), "api/v2/tickets.json");
+		Object[] respond = post(gson.toJson(new Ticket("My printer is on fire!", "The smoke is very colorful.")), "api/v2/tickets.json");
 		
 		int statusCode = (Integer) respond[0];
 		CreateTicket ct = gson.fromJson((String) respond[1], CreateTicket.class);
